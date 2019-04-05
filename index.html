@@ -3,59 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <title>Welcome to Keko's blog</title>
+<!--
+-->
 <link href="css/css.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+<!--
+-->
 <script src="scripts/main.js"></script>
 <!-- ここはナビゲーションバーに -->
-<ul>
-  <li><a class="active" href="#top">Top</a></li>
-  <li><a href="#profile">Profile</a></li>
-  <li><a href="#product">Product</a></li>
-  <li><a href="#link">Link</a></li>
-</ul>
+<nav>
+  <ul>
+    <li><a class="active" href="#top">Top</a></li>
+    <li><a href="#profile">Profile</a></li>
+    <li><a href="#product">Product</a></li>
+    <li><a href="#link">Link</a></li>
+  </ul>
+</nav>
 
 <!-- 1ページ目 -->
-<div id="top">
+<article id="top">
   <header>
     <h1>Welcome to Keko's blog.</h1>
-  </header>  
-</div>
+  </header>
+</article>
 
 <!-- 2ページ目 -->
-<div id="profile">
+<article id="profile">
   <h2>Profile</h2>
-  <div class="absolute" id="absProfile">
-    <div class="relative">
-      <div class="centering">
-        <img id="profImage" src="assets/profiletop.JPG" alt="K.Nagahori" title="自分の写真">        
-      </div>
-    </div>
-  </div>
-</div>
+  <section>
+    <img id="profImage" src="assets/profiletop.JPG" alt="K.Nagahori" title="自分の写真">        
+  </section>
+</article>
 
 <!-- 3ページ目 -->
-<div id="product">
+<article id="product">
   <h2>Product</h2>
-  <div class="absolute" id="absProduct">
-    <div class="relative">
-      <div class="centering">
-        <img id="productImage" src="assets/product.png" alt="listManager" title="制作物1">
-      </div>
-    </div>
-  </div>
-</div>
+  <section>
+    <img id="productImage" src="assets/product.png" alt="listManager" title="制作物1">
+  </section>
+</article>
 
 <!-- 4ページ目 -->
-<div id="link">
+<article id="link">
   <h2>Link</h2>
-  <!-- 最後のページに -->
-  <footer>
-    <address>Copyright(C) 2019 K.Nagahori Allright Reserved.</address>
-  </footer>
-</div>
-
+  <aside>
+    <footer>
+      <address>Copyright(C) 2019 K.Nagahori Allright Reserved.</address>
+    </footer>
+  </aside>
+</article>
 
 </body>
 </html>
