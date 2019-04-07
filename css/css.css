@@ -17,7 +17,7 @@ body{
 }
 
 /* navigation bar */
-ul{
+.navContent ul{
     list-style-type: none;
     overflow: hidden;
     background-color: #1b2538;
@@ -27,12 +27,12 @@ ul{
     height: 5vh;
 }
 
-li{
+.navContent li{
     float: left;
     border-right: 1px solid #bbbbbb;
 }
 
-li a{
+.navContent li a{
     display: block;
     color: white;
     text-decoration: none;

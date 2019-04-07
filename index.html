@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <title>Welcome to Keko's blog</title>
 <!--
-<link href="css/css.css" rel="stylesheet" type="text/css">
 -->
+<link href="css/test.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
 <script src="scripts/main.js"></script>
 -->
 <!-- ここはナビゲーションバーに -->
-<nav>
+<nav class="navContent">
   <ul>
     <li><a class="active" href="#top">Top</a></li>
     <li><a href="#profile">Profile</a></li>
@@ -24,10 +24,10 @@
 
 <!-- 1ページ目 -->
 <article id="top">
-  <header>
+  <header class="top">
     <h1>Welcome to Keko's blog.</h1>
   </header>
-  <section>
+  <section class="top">
     <!-- 挨拶文 -->
     <p>
       ようこそ！ここは関西大学総合情報学部所属の 長堀 の自己紹介ページです。
@@ -39,86 +39,100 @@
 <!-- 2ページ目 -->
 <article id="profile">
   <h2>Profile</h2>
-  <section>
-    <img id="profImage" src="assets/profiletop.JPG" alt="K.Nagahori" title="自分の写真">        
-  </section>
-  <section>
-    <!-- History -->
-    <h2>History</h2>
-    <ul>
-      <li>兵庫県神戸市で誕生</li>
-      <li>地元の小中で育つ</li>
-      <li>神戸市立神港高等学校情報処理科を卒業</li>
-      <li>関西大学総合情報学部に入学</li>
-    </ul>
-  </section>
-  <section>
-    <!-- Skill -->
-    <h2>Skill</h2>
-    <h3>Front</h3>
-    <ul>
-      <li>HTML5</li>
-      <li>SCSS, CSS</li>
-      <li>JavaScript</li>
-      <li>PHP</li>
-    </ul>
-    <h3>Server</h3>
-    <ul>
-      <li>PHP</li>
-      <li>Node.js(勉強中)</li>
-    </ul>
-    <h3>Native</h3>
-    <ul>
-      <li>Python</li>
-      <li>Java</li>
-    </ul>
-    <h3>Begginer</h3>
-    <ul>
-      <li>C, C++, C#</li>
-    </ul>
-  </section>
-  <section>
-    <!-- Fun -->
-    <h2>Fun</h2>
-    <ul>
-      <li>アニメ視聴</li>
-      <li>Tech本を読む</li>
-      <li>ゲーム</li>
-      <li>音楽</li>
-      <li>ウインドウショッピング</li>
-    </ul>
-  </section>
+  <article class="profGrid">
+    <section class="profImage">
+      <img id="profImage" src="assets/profiletop.JPG" alt="K.Nagahori" title="自分の写真">        
+    </section>
+    <section class="history">
+      <!-- History -->
+      <h2>History</h2>
+      <ul>
+        <li>兵庫県神戸市で誕生</li>
+        <li>地元の小中で育つ</li>
+        <li>神戸市立神港高等学校情報処理科を卒業</li>
+        <li>関西大学総合情報学部に入学</li>
+      </ul>
+    </section>
+    <section class="skill">
+      <!-- Skill -->
+      <h2>Skill</h2>
+      <div class="skillGrid">
+        <div class="front">
+          <h3>Front</h3>
+          <ul>
+            <li>HTML5</li>
+            <li>SCSS, CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+          </ul>
+        </div>
+        <div class="server">
+          <h3>Server</h3>
+          <ul>
+            <li>PHP</li>
+            <li>Node.js(勉強中)</li>
+          </ul>
+        </div>
+        <div class="native">
+          <h3>Native</h3>    
+          <ul class="native">
+              <li>Python</li>
+              <li>Java</li>
+            </ul>
+            </div>
+        <div class="beginner">
+          <h3>Beginner</h3>
+          <ul class="beginner">
+            <li>C, C++, C#</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="fun">
+      <!-- Fun -->
+      <h2>Fun</h2>
+      <ul>
+        <li>アニメ視聴</li>
+        <li>Tech本を読む</li>
+        <li>ゲーム</li>
+        <li>音楽</li>
+        <li>ウインドウショッピング</li>
+      </ul>
+    </section>
+  </article>
 </article>
 
 <!-- 3ページ目 -->
 <article id="product">
   <h2>Product</h2>
-  <section>
-    <img id="productImage" src="assets/product.png" alt="listManager" title="制作物1">
-  </section>
-  <section>
-    <!-- Purpose -->
-    <h2>目的</h2>
-    <p>
-      友人から、Twitterのリストへの追加機能で肥大化したリストを整理したいという要望を受けた。
-      ちょうど、自分も困っていたところだったので、投稿画像からリストを整理するアプリを制作することにした。
-    </p>
-  </section>
-  <section>
-    <!-- Function -->
-    <h2>機能</h2>
-    <ul>
-      <li>Twitterへのログイン</li>
-      <li>リストユーザの一覧の取得</li>
-      <li>選択したユーザのツイートから画像を取得</li>
-      <li>4つの画像を格子状に並べて中央に表示</li>
-      <li>リストへの追加・削除</li>
-    </ul>
-  </section>
-  <section>
-    <!-- Distribution(配布先) -->
-    <h2>入手</h2>
-  </section>
+  <article class="productFlex">
+    <section>
+      <img id="productImage" src="assets/product.png" alt="listManager" title="制作物1">
+    </section>
+    <section>
+      <!-- Purpose -->
+      <h2>目的</h2>
+      <p>
+        友人から、Twitterのリストへの追加機能で肥大化したリストを整理したいという要望を受けた。<br />
+        ちょうど、自分も困っていたところだったので、投稿画像からリストを整理するアプリを制作することにした。
+      </p>
+    </section>
+    <section>
+      <!-- Function -->
+      <h2>機能</h2>
+      <ul>
+        <li>Twitterへのログイン</li>
+        <li>リストユーザの一覧の取得</li>
+        <li>選択したユーザのツイートから画像を取得</li>
+        <li>4つの画像を格子状に並べて中央に表示</li>
+        <li>リストへの追加・削除</li>
+      </ul>
+    </section>
+    <section>
+      <!-- Distribution(配布先) -->
+      <h2>入手</h2>
+    </section>
+  </article>
 </article>
 
 <!-- 4ページ目 -->

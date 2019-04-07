@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+$topWidth: 100vw;
+$topHeight: 100vh;
+$tabHeight: 5vh;
+$ulMarginHeight: 3vw;
+
+article{
+    display: flex;
+    padding: $tabHeight 0 0 0;
+    width: $topWidth;
+    height: $topHeight;
+    flex-direction: column;
+}
+
+/* navigation bar */
+$tabWidth: 100vw;
+$tabWidthQuate: 24vw;
+
+.navContent ul{
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #1b2538;
+    position: fixed;
+    top: 0;
+    width: $tabWidth;
+    height: $tabHeight;
+}
+.navContent li{
+    float: left;
+    border-right: 1px solid #bbbbbb;
+}
+.navContent li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    width: $tabWidthQuate;
+    height: $tabHeight;
+}
+.navContent li:last-child{border-right: none;}
+.navContent li a:hover:not(.active){background-color: #a9bce2;}
+.navContent .active{background-color: #da3c41;}
+
+/* main content */
+$topBackImage: "../assets/topBackGray.jpg";
+$topHeaderHeight: 5vh;
+$topSectionHeight: $topHeight - $topHeaderHeight;
+
+article#top{
+    background-image: url($topBackImage);
+    background-size: cover;
+    display: grid;
+    grid-template-rows: $topHeaderHeight $topSectionHeight;
+}
+section.top{
+    background-color: blue;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+
+/* Profile */
+$profImageWidth: 25vw;
+$gridMarginWidth: 5vw;
+
+#id h2{
+    height: $topHeaderHeight;
+}
+.profGrid{
+    display: grid;
+    height: $topHeight - $topHeaderHeight;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: $profImageWidth 1fr 1fr;
+    padding: 0 $gridMarginWidth 0 $gridMarginWidth;
+}
+.profGrid ul{
+    margin-left: $ulMarginHeight;
+}
+.profImage{
+    grid-column: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+    grid-row-end: auto;
+}
+.history{
+    grid-column: 1;
+    grid-column-end: auto;
+    grid-row: 2;
+    grid-row-end: auto;
+}
+.skill{
+    grid-column: 2;
+    grid-column-end: auto;
+    grid-row: 2;
+    grid-row-end: auto;
+}
+.fun{
+    grid-column: 1;
+    grid-column-end: auto;
+    grid-row: 3;
+    grid-row-end: auto;
+}
+.skillGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.front{
+    grid-column: 1;
+    grid-row: 1;
+}
+.server{
+    grid-column: 2;
+    grid-row: 1;
+}
+#profImage{
+    width: $profImageWidth;
+    margin: auto;
+}
+
+/* Product */
+$flexMarginWidth: 5vw;
+$productImageWidth: 50vw;
+.productFlex{
+    padding: 0 $flexMarginWidth 0 $flexMarginWidth;
+}
+.productFlex ul{
+    margin-left: $ulMarginHeight;
+}
+#productImage{
+    width: $productImageWidth;
+}
